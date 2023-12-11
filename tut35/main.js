@@ -76,3 +76,66 @@ let checkPrice = userCart.every((getDetail)=> getDetail.price>10000)
 /*
 if any one array element satisfy on condtion then some() method give true otherwise give false
 */
+let myNUmber = [3,5,11,11]
+
+let getResult = myNUmber.some((number)=> number%2===0);
+// console.log(getResult)
+
+
+// -------- REAL LIFE EXAMPLE
+let userCartinfo = [
+    {productId:1,productName:"mobile",price:12000},
+    {productId:2,productName:"tablet",price:20000},
+    {productId:3,productName:"laptop",price:35000},
+    {productId:4,productName:"computer",price:50000},
+]
+
+let getResult2 = userCartinfo.some((number)=> number.price>30000)
+// console.log(getResult2)
+
+
+// ------------------------------------- fill() method -------------------------------------------
+
+// if we want a same value in specift range then we use fill method
+let myArrfill = new Array(10).fill(0)
+// console.log(myArrfill)
+
+// we can replace specific element in array use fill method
+let myArrfill2 = [1,2,3,4,5,6,7]
+myArrfill2.fill(0,2,5)   // value , start, end
+// console.log(myArrfill2)
+
+
+// --------------------------------------splice() method ----------------------------------------
+/* 
+1. splice method help delete element in array
+2. we can use insert element in specific index using this
+3. splice() method change original array
+4. we can get deleted element using splice method 
+5. syntex - splice(start,delete,insert)
+*/
+
+let myArrsp = [1,2,3,4,5]
+// ---- delete element 
+// myArrsp.splice(1,2)
+// console.log(myArrsp)
+
+// ---- insert element 
+// myArrsp.splice(1,0,'ravi')
+// console.log(myArrsp)
+
+// ---- delete and insert element
+// console.log(myArrsp)
+// myArrsp.splice(1,2,'ravi','shiv')
+// console.log(myArrsp)
+
+// ----- get delete element
+let getdelement = myArrsp.splice(1,2)
+// console.log(getdelement)
+
+
+
+
+
+
+
