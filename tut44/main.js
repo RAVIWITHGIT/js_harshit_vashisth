@@ -48,6 +48,7 @@ let user3 = new createUser3('ravi',21)
 
 // ---------------------*************** SEE REAL LIFE EXAMPLE USING TUT43 CODE
 
+
 function multiObj2(firstName,lastName,age,city,hobbie) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -73,3 +74,31 @@ console.log(us1)
 console.log(us1.about())
 console.log(us1.is18())
 console.log(us1.wish())
+
+
+
+// note -- > how devloper know that this function will be called using new keyword, so if we create a function which has to use the "new" keyword while calling it then we have to capitalize the first letter of the function
+
+function MultiObj3(firstName,lastName,age,city,hobbie) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.city = city;
+    this.hobbie = hobbie
+    
+}
+MultiObj3.prototype.about = function(){
+    return `${this.firstName} is ${this.age} year old`;
+}
+MultiObj3.prototype.is18 =  function(){
+    return this.age >= 18;
+}
+
+MultiObj3.prototype.wish = function(){
+    return `wish you happy birthday ${this.firstName}`
+}
+
+
+let us2 = new MultiObj3('ranu','lakshakar',23,'bassi','study')
+// console.log(us2)
+// console.log(us2.about())
