@@ -1,3 +1,5 @@
+// ----------************ SEE THIS CODE IN BROWSER TERMINAL
+
 // ------*************** UNDERDSTAND ABOUT OBJECT.CREAT() , __PROTO__ , IMPROVE TUT41 CODE ***------
 
 
