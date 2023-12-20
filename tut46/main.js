@@ -54,7 +54,83 @@ let user1 = new CreateUser('ravi','lakshakar','myemail',21,'bassi')
 
 // ---------------------- inhertance in class --------------------------------------------
 
-// animal is parent class
+//------> animal is parent class
+
+// class Animal{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     eat(){
+//         return `${this.name} is eating`
+//     }
+//     isSuperCute(){
+//         return this.age <= 1;
+//     }
+//     isCute(){
+//         return true
+//     }
+// }
+
+
+//note ----> dog is sub class
+
+// class dog extends Animal{
+
+// }
+// let dog1 = new dog('tommy',22)
+// console.log(dog1)
+// console.log(dog1.isSuperCute())
+// console.log(dog1.eat())
+
+
+// -------------------------- super() keyword ---------------------------------------------------
+
+/*
+1.  super() keyword help to use parent constructer in sub class without make properties of parent class in sub class 
+*/
+
+
+// class Animal{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     eat(){
+//         return `${this.name} is eating`
+//     }
+//     isSuperCute(){
+//         return this.age <= 1;
+//     }
+//     isCute(){
+//         return true
+//     }
+// }
+
+
+
+// class dog extends Animal{
+//     constructor(name,age,color){
+//         super(name,age);
+//         this.color = color;
+//     }
+
+//     info(){
+//         return `dog name is ${this.name} age is ${this.age} and color of dog is ${this.color} `
+//     }
+
+
+// }
+// let dog1 = new dog('tommy',22,'brown')
+// console.log(dog1)
+// console.log(dog1.name)
+// console.log(dog1.color)
+// console.log(dog1.eat())
+// console.log(dog1.info())
+
+
+// ----------************* overwrite same method of parent class in sub/bass class
+
 
 class Animal{
     constructor(name,age){
@@ -73,11 +149,24 @@ class Animal{
 }
 
 
-// dog is sub class
+
 class dog extends Animal{
+    constructor(name,age,color){
+        super(name,age);
+        this.color = color;
+    }
+    eat(){
+        return 'overwrite eat method in base class'
+    }
+    info(){
+        return `dog name is ${this.name} age is ${this.age} and color of dog is ${this.color} `
+    }
+
 
 }
-let dog1 = new dog('tommy',22)
+let dog1 = new dog('tommy',22,'brown')
 console.log(dog1)
-console.log(dog1.isSuperCute())
+console.log(dog1.name)
+console.log(dog1.color)
 console.log(dog1.eat())
+console.log(dog1.info())
