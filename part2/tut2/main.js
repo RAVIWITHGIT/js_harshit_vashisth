@@ -42,3 +42,27 @@
 // const cube = myFunction(3)
 // const ans = cube(3);
 // console.log(ans)
+
+
+// --------------------
+function fun(){
+    let a = true
+    return function (){
+        if(a){
+            console.log("call the function")
+            a = false
+        }
+        else{
+            console.log('you already call the function upper')
+        }
+
+    }
+}
+
+let getfun = fun()
+// getfun()
+// getfun()
+
+let getfun2 = fun()
+// getfun2()
+// getfun2()
