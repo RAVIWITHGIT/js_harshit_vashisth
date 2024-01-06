@@ -85,3 +85,31 @@
 
 
 
+// --------------------------------------------------------------------------------------------------
+
+// iterate element ---> we can iterate html colletction using for loop and for of loop , but we can not use for each loop
+// if we want use foreach loop then first of all html collection convert to array using Array.from() then we use foreach method
+
+
+
+// let mya = document.getElementsByTagName('a')
+// console.log(mya)
+
+// for (let i = 0; i < mya.length; i++) {
+//     mya[i].style = "background-color: yellow;color:black;padding:5px 10px;border-radius:23px;"
+    
+// }
+
+// for(let i of mya){
+//     i.style = "background-color: yellow;color:black;padding:5px 10px;border-radius:23px;"
+
+// }
+
+
+// ---------- html collection convert in array and then use foreach method
+// let narry = Array.from(mya)
+// narry.forEach((item)=>{
+//     item.style = "background-color: yellow;color:black;padding:5px 10px;border-radius:23px;"
+// })
+
+

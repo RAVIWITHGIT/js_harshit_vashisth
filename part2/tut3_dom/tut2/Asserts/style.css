@@ -112,6 +112,7 @@ justify-content: space-between;
 }
 .signupForm textarea{
     width: 100%;
+    
 }
 .form_group{
     margin-top: 1rem;
